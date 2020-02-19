@@ -11,15 +11,16 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /src/*.deb
 
-# Create app directory
-WORKDIR /usr/src/app
+
+WORKDIR /mnt/pdf
+
+COPY package*.json ./
 
 # Install app dependencies
-COPY package.json yarn.lock ./
-RUN yarn install --production=true
+RUN npm install --production=true
 
 # Bundle app source
 COPY . .
 
-EXPOSE 8080
+EXPOSE 5002
 CMD [ "node", "index.js" ]

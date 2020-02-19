@@ -1,5 +1,5 @@
 {
-  "name": "BreezyPDF Lite",
+  "name": "LoanLink BreezyPDF Lite",
   "description": "Submit an HTML string, get a PDF back, rendered by Google Chrome. Built by BreezyPDF.com",
   "keywords": [
     "pdf",
@@ -11,7 +11,7 @@
   "scripts": {
   },
   "stack": "heroku-18",
-  "repository": "https://github.com/danielwestendorf/breezy-pdf-lite",
+  "repository": "https://github.com/loanlink/breezy-pdf-lite",
   "env": {
     "PRIVATE_TOKEN": {
       "description": "A secret key for submitting tokens to the API.",
